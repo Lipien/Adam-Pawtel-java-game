@@ -11,7 +11,9 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
+
 
 import java.util.Random;
 
@@ -22,7 +24,7 @@ public class TicTacToeApp extends Application {
     private char currentPlayer = 'X';
     private char comp = 'O';
 
-    // komórki do GridPane
+    // komórki w GridPane
     private Cell[][] cell = new Cell[3][3];
     private Label statusMsg = new Label("  X has to move first");
 
@@ -37,21 +39,25 @@ public class TicTacToeApp extends Application {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 cell[i][j] = new Cell();
-                pane.add(cell[i][j], j, i);
+                pane.add(cell[i][j], i, j);
             }
         }
-// BorderPane jest umieszczone w Scene
+        statusMsg.setFont(Font.font("Verdana", 20));
+
+
+// BorderPane jest umieszczona w Scene
         BorderPane borderPane = new BorderPane();
-        borderPane.setPadding(new Insets(5, 5, 5, 5));
+        borderPane.setPadding(new Insets(20, 20, 20, 20));
         borderPane.setCenter(pane);
+        borderPane.setStyle("-fx-padding: 10");
         borderPane.setTop(statusMsg);
         borderPane.setBottom(null);
 
-// Przycisk NewGame jest do zaprogramowania
+        // Przycisk NewGame jest do zaprogramowania
         Button newGameButton = new Button("New GAME");
         newGameButton.setPrefSize(100, 20);
-//   newGameButton.setDefaultButton(true);
-//   newGameButton.setOnAction(event ->
+//      newGameButton.setDefaultButton(true);
+//      newGameButton.setOnAction(event ->
 
 
         Button exitButton = new Button("EXIT");
@@ -60,15 +66,13 @@ public class TicTacToeApp extends Application {
 
         RadioButton radioButton = new RadioButton("play against PC");
         radioButton.setSelected(true);
-//      radioButton.setAlignment();
 
 
         VBox buttonBar = new VBox();
         buttonBar.getChildren().addAll(newGameButton, exitButton, radioButton);
 // styl
         buttonBar.setPadding(new Insets(15, 12, 15, 12));
-        buttonBar.setSpacing(30);   // Gap between nodes
-        buttonBar.setStyle("-fx-background-color: #E6E6FA;");
+        buttonBar.setSpacing(30);   // odstęp między przełącznikami
 
 
         borderPane.setRight(buttonBar);
@@ -82,32 +86,58 @@ public class TicTacToeApp extends Application {
 
     private boolean isBoardFull() {
         for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
+            for (int j = 0; j < 3; j++)
                 if (cell[i][j].getPlayer() == ' ') {
                     return false;
                 }
-            }
         }
 
         return true;
     }
 
     private boolean hasWon(char player) {
-        for (int i = 0; i < 3; i++) {
+        // pionowo
+        for (int i = 0; i < 3; i++)
             if (cell[i][0].getPlayer() == player && cell[i][1].getPlayer() == player && cell[i][2].getPlayer() == player) {
+
+
+                cell[i][0].setStyle("-fx-background-color: darkgray;");
+                cell[i][1].setStyle("-fx-background-color: darkgray;");
+                cell[i][2].setStyle("-fx-background-color: darkgray;");
+
+
+                return true;
+            }
+        // poziomo
+        for (int i = 0; i < 3; i++) {
+            if (cell[0][i].getPlayer() == player && cell[1][i].getPlayer() == player && cell[2][i].getPlayer() == player) {
+
+                cell[0][i].setStyle("-fx-background-color: darkgray;");
+                cell[1][i].setStyle("-fx-background-color: darkgray;");
+                cell[2][i].setStyle("-fx-background-color: darkgray;");
 
                 return true;
             }
         }
-        for (int i = 0; i < 3; i++) {
-            if (cell[0][i].getPlayer() == player && cell[1][i].getPlayer() == player && cell[2][i].getPlayer() == player) {
-                return true;
-            }
-        }
+        // góra dół po skosie
         if (cell[0][0].getPlayer() == player && cell[1][1].getPlayer() == player && cell[2][2].getPlayer() == player) {
+
+            cell[0][0].setStyle("-fx-background-color: darkgray;");
+            cell[1][1].setStyle("-fx-background-color: darkgray;");
+            cell[2][2].setStyle("-fx-background-color: darkgray;");
+
             return true;
         }
-        return cell[0][2].getPlayer() == player && cell[1][1].getPlayer() == player && cell[2][0].getPlayer() == player;
+        // dół góra po skosie
+        if (cell[0][2].getPlayer() == player && cell[1][1].getPlayer() == player && cell[2][0].getPlayer() == player) {
+
+            cell[0][2].setStyle("-fx-background-color: darkgray;");
+            cell[1][1].setStyle("-fx-background-color: darkgray;");
+            cell[2][0].setStyle("-fx-background-color: darkgray;");
+
+            return true;
+        }
+        return false;
     }
 
 
@@ -119,7 +149,7 @@ public class TicTacToeApp extends Application {
         }
 
         public Cell() {
-            setStyle("-fx-border-color : black");
+            this.setStyle("-fx-border-color: black");
             this.setPrefSize(300, 400);
             this.setOnMouseClicked(e -> handleClick());
         }
@@ -140,10 +170,10 @@ public class TicTacToeApp extends Application {
                 }
                 if (hasWon(comp)) {
                     statusMsg.setText(comp + " won! The game is over");
-                    comp = ' '; // Game is over
+                    comp = ' ';
                 } else if (isBoardFull()) {
                     statusMsg.setText("Draw! The game is over");
-                    comp = ' '; // Game is over
+                    comp = ' ';
                 }
             }
             return false;
@@ -161,14 +191,17 @@ public class TicTacToeApp extends Application {
                     statusMsg.setText("Draw !");
                     currentPlayer = ' ';
                 } else {
-                    currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
-                    statusMsg.setText(currentPlayer + " must play");
 
-// -> do połączenia z RadioButton (gra z PC)
+// odkomentować poniższe, jeżeli gra z drugim graczem (nie PC)
 
-                    compTurn();
+//                  currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
+//                  statusMsg.setText(currentPlayer + " must play");
+
+                    compTurn(); //  do połączenia z RadioButton (gra z PC)
                 }
+
             }
+
         }
 
         public void setPlayer(char player) {
@@ -177,14 +210,10 @@ public class TicTacToeApp extends Application {
 
             if (player == 'X') {
                 Line line1 = new Line(30, 30, this.getWidth() - 30, this.getHeight() - 30);
-                line1.endXProperty().bind(this.widthProperty().subtract(30));
-                line1.endYProperty().bind(this.heightProperty().subtract(30));
                 line1.setStrokeWidth(10);
                 line1.setStroke(Color.GREEN);
 
                 Line line2 = new Line(30, this.getHeight() - 30, this.getWidth() - 30, 30);
-                line2.endXProperty().bind(this.widthProperty().subtract(30));
-                line2.startYProperty().bind(this.heightProperty().subtract(30));
                 line2.setStrokeWidth(10);
                 line2.setStroke(Color.GREEN);
 
@@ -193,7 +222,7 @@ public class TicTacToeApp extends Application {
 
             } else if (player == 'O') {
 
-                Circle circle = new Circle(40);
+                Circle circle = new Circle(35);
 
 
                 circle.centerXProperty().bind(this.widthProperty().divide(2));
