@@ -26,6 +26,8 @@ public class TicTacToeApp extends Application {
     private RadioButton radioButton = new RadioButton("play against PC");
     private GridPane gridPane;
     private BorderPane borderPane;
+    private boolean isBoardFull = false;
+
 
     public static void main(String[] args) {
         launch(args);
@@ -50,6 +52,8 @@ public class TicTacToeApp extends Application {
         newGameButton.setOnAction(event -> {
             try {
                 initBoard();
+                currentPlayer = 'X';
+                comp = 'O';
                 borderPane.setCenter(gridPane);
                 statusMsg.setText("  X has to move first");
             } catch (Exception e) {
@@ -66,7 +70,7 @@ public class TicTacToeApp extends Application {
         VBox buttonBar = new VBox();
         buttonBar.getChildren().addAll(newGameButton, exitButton, radioButton);
         buttonBar.setPadding(new Insets(15, 12, 15, 12));
-        buttonBar.setSpacing(30);   // odstęp między przełącznikami
+        buttonBar.setSpacing(30);
 
         borderPane.setRight(buttonBar);
         Scene scene = new Scene(borderPane, WIDTH, HEIGHT);
@@ -99,7 +103,6 @@ public class TicTacToeApp extends Application {
     }
 
     private boolean hasWon(char player) {
-        // pionowo
         for (int i = 0; i < 3; i++)
             if (cell[i][0].getPlayer() == player && cell[i][1].getPlayer() == player
                     && cell[i][2].getPlayer() == player) {
@@ -108,7 +111,6 @@ public class TicTacToeApp extends Application {
                 cell[i][2].setStyle("-fx-background-color: darkgray;");
                 return true;
             }
-        // poziomo
         for (int i = 0; i < 3; i++) {
             if (cell[0][i].getPlayer() == player && cell[1][i].getPlayer() == player
                     && cell[2][i].getPlayer() == player) {
@@ -118,7 +120,6 @@ public class TicTacToeApp extends Application {
                 return true;
             }
         }
-        // góra dół po skosie
         if (cell[0][0].getPlayer() == player && cell[1][1].getPlayer() == player
                 && cell[2][2].getPlayer() == player) {
             cell[0][0].setStyle("-fx-background-color: darkgray;");
@@ -126,7 +127,6 @@ public class TicTacToeApp extends Application {
             cell[2][2].setStyle("-fx-background-color: darkgray;");
             return true;
         }
-        // dół góra po skosie
         if (cell[0][2].getPlayer() == player && cell[1][1].getPlayer() == player
                 && cell[2][0].getPlayer() == player) {
             cell[0][2].setStyle("-fx-background-color: darkgray;");
@@ -151,7 +151,7 @@ public class TicTacToeApp extends Application {
             if (hasWon(comp)) {
                 statusMsg.setText(comp + " won! The game is over");
                 comp = ' ';
-            } else if (isBoardFull()) {
+            } else if (isBoardFull) {
                 statusMsg.setText("Draw! The game is over");
                 comp = ' ';
             }
@@ -165,10 +165,10 @@ public class TicTacToeApp extends Application {
             if (cell.getPlayer() == ' ' && currentPlayer != ' ') {
                 cell.setPlayer(currentPlayer);
                 if (hasWon(currentPlayer)) {
-                    statusMsg.setText(currentPlayer + " won !");
+                    statusMsg.setText(currentPlayer + " won!");
                     currentPlayer = ' ';
-                } else if (isBoardFull()) {
-                    statusMsg.setText("Draw !");
+                } else if (isBoardFull) {
+                    statusMsg.setText("Draw!");
                     currentPlayer = ' ';
                 } else {
                     compTurn();
@@ -180,12 +180,12 @@ public class TicTacToeApp extends Application {
                 if (hasWon(currentPlayer)) {
                     statusMsg.setText(currentPlayer + " won !");
                     currentPlayer = ' ';
-                } else if (isBoardFull()) {
-                    statusMsg.setText("Draw !");
+                } else if (isBoardFull) {
+                    statusMsg.setText("Draw!");
                     currentPlayer = ' ';
                 } else {
                     currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
-                    statusMsg.setText(currentPlayer + " must play");
+                    statusMsg.setText(" Now it's " + currentPlayer + "'s move");
                 }
             }
         }

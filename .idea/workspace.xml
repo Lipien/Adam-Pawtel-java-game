@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e553b12-f7b3-4d86-822c-e39c1f497d0b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/tictactoe/com/kodilla/TicTacToeApp$Cell.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tictactoe/com/kodilla/TicTacToeApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/kodilla/TicTacToeApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tictactoe/com/kodilla/Cell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tictactoe/com/kodilla/Cell.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tictactoe/com/kodilla/TicTacToeApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tictactoe/com/kodilla/TicTacToeApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/kodilla/TicTacToeApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kodilla/TicTacToeApp.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,20 +36,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/kodilla/TicTacToeApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+            <state relative-caret-position="-1540">
+              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/kodilla/Cell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            <state>
+              <caret column="20" selection-start-column="20" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,7 +92,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="377" />
     <option name="y" value="4" />
     <option name="width" value="1228" />
@@ -99,8 +106,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -128,7 +135,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544738501869" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544814568017" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -196,11 +203,14 @@
       <workItem from="1544289073347" duration="623000" />
       <workItem from="1544371463943" duration="64000" />
       <workItem from="1544371542870" duration="23147000" />
+      <workItem from="1544777218729" duration="543000" />
+      <workItem from="1544791017953" duration="1158000" />
+      <workItem from="1544812135925" duration="2324000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115886000" />
+    <option name="totallyTimeSpent" value="120611000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -213,8 +223,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="66" y="-8" width="1862" height="1216" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24528302" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16481687" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -223,17 +234,18 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32991612" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49778023" weight="0.57096773" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49778023" visible="true" weight="0.33113208" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.41312385" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32991612" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.2795699" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.23867925" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50221974" side_tool="true" weight="0.20055453" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32994455" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49812734" visible="true" weight="0.39463955" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49812734" weight="0.39433962" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32991612" />
+      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -243,6 +255,7 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Database" order="7" weight="0.32960895" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.32867783" />
+      <window_info anchor="right" id="Maven" order="9" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21988389" />
@@ -401,15 +414,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kodilla/TicTacToeApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        <state relative-caret-position="-1540">
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kodilla/Cell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
