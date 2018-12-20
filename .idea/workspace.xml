@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0e553b12-f7b3-4d86-822c-e39c1f497d0b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tictactoe/com/kodilla/Cell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tictactoe/com/kodilla/Cell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tictactoe/com/kodilla/TicTacToeApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tictactoe/com/kodilla/TicTacToeApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tictactoe/com/kodilla/Cell.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tictactoe/com/kodilla/TicTacToeApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/kodilla/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kodilla/Cell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/kodilla/TicTacToeApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kodilla/TicTacToeApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tictactoe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoe.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,25 +38,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/kodilla/TicTacToeApp.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/kodilla/Cell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1540">
-              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+            <state relative-caret-position="110">
+              <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#363#364#0" expanded="true" />
+                <element signature="e#392#393#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kodilla/Cell.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/kodilla/TicTacToeApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="20" selection-start-column="20" selection-end-column="20" />
+            <state relative-caret-position="2706">
+              <caret line="123" column="16" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1143#1144#0" expanded="true" />
+                <element signature="e#1171#1172#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -66,12 +72,18 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>setOnMouseClicked</find>
+      <find>hasWon</find>
+      <find>thePlayer</find>
+      <find>row1</find>
+      <find>player</find>
+      <find>move[0]</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -81,6 +93,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/kodilla/GameStatus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/kodilla/TicTacToeApp.java" />
+        <option value="$PROJECT_DIR$/src/com/kodilla/Seed.java" />
+        <option value="$PROJECT_DIR$/src/com/kodilla/AIPlayer.java" />
+        <option value="$PROJECT_DIR$/src/com/kodilla/AIPlayerMinimax.java" />
         <option value="$PROJECT_DIR$/src/com/kodilla/Cell.java" />
         <option value="$PROJECT_DIR$/src/com/kodilla/TicTacToeApp.java" />
       </list>
@@ -92,11 +108,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="377" />
-    <option name="y" value="4" />
-    <option name="width" value="1228" />
-    <option name="height" value="1064" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="251" />
+    <option name="y" value="80" />
+    <option name="width" value="1470" />
+    <option name="height" value="1082" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -106,8 +122,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -130,14 +144,19 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544814568017" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545299942947" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -153,8 +172,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="TicTacToeApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.TicTacToeApp (1)">
+    <configuration name="TicTacToeApp (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.kodilla.TicTacToeApp" />
       <module name="tictactoe" />
       <extension name="coverage">
@@ -167,8 +186,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TicTacToeApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.kodilla.TicTacToeApp" />
+      <module name="tictactoe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.java.kodilla.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TicTacToeApp (1)" />
         <item itemvalue="Application.TicTacToeApp" />
       </list>
     </recent_temporary>
@@ -205,12 +238,17 @@
       <workItem from="1544371542870" duration="23147000" />
       <workItem from="1544777218729" duration="543000" />
       <workItem from="1544791017953" duration="1158000" />
-      <workItem from="1544812135925" duration="2324000" />
+      <workItem from="1544812135925" duration="3920000" />
+      <workItem from="1544866013087" duration="1132000" />
+      <workItem from="1544882795730" duration="4376000" />
+      <workItem from="1545039822335" duration="23225000" />
+      <workItem from="1545137838032" duration="17000" />
+      <workItem from="1545163664730" duration="34609000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120611000" />
+    <option name="totallyTimeSpent" value="185566000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -222,10 +260,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="66" y="-8" width="1862" height="1216" extended-state="6" />
-    <editor active="true" />
+    <frame x="251" y="80" width="1470" height="1082" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16481687" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21560283" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -233,17 +270,17 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32991612" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49778023" visible="true" weight="0.33113208" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.41312385" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49778023" weight="0.31641468" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.41144708" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32991612" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.23867925" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3513889" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50221974" side_tool="true" weight="0.20055453" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32994455" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49812734" weight="0.39433962" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49812734" weight="0.39416847" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32991612" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -412,25 +449,130 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kodilla/TicTacToeApp.java">
+    <entry file="file://$PROJECT_DIR$/src/main" />
+    <entry file="file://$PROJECT_DIR$/src/com/kodilla/Seed.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1540">
-          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+        <state relative-caret-position="44">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kodilla/AIPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#1457#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kodilla/AIPlayerMinimax.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kodilla/Cell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
+        <state relative-caret-position="110">
+          <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#363#364#0" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kodilla/TicTacToeApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2706">
+          <caret line="123" column="16" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1143#1144#0" expanded="true" />
+            <element signature="e#1171#1172#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>PROGRAMOWANIE</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>tictactoe</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

@@ -5,14 +5,12 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 
-
 public class Cell extends Pane {
     private char player = ' ';
 
     public Cell() {
         this.setStyle("-fx-border-color: black");
         this.setPrefSize(300, 400);
-
     }
 
     public char getPlayer() {
@@ -42,6 +40,4 @@ public class Cell extends Pane {
             getChildren().add(circle);
         }
     }
-
-
 }

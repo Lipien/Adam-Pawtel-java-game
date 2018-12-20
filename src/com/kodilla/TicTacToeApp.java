@@ -12,8 +12,6 @@ import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-import java.util.Random;
-
 public class TicTacToeApp extends Application {
 
     private static final int WIDTH = 500;
@@ -27,7 +25,9 @@ public class TicTacToeApp extends Application {
     private GridPane gridPane;
     private BorderPane borderPane;
     private boolean isBoardFull = false;
-
+    private int[][] preferredMoves = {
+            {1, 1}, {0, 0}, {0, 2}, {2, 0}, {2, 2},
+            {0, 1}, {1, 0}, {1, 2}, {2, 1}};
 
     public static void main(String[] args) {
         launch(args);
@@ -35,9 +35,7 @@ public class TicTacToeApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-
         initBoard();
-
         statusMsg.setFont(Font.font("Verdana", 20));
         borderPane = new BorderPane();
         borderPane.setPadding(new Insets(20, 20, 20, 20));
@@ -50,16 +48,17 @@ public class TicTacToeApp extends Application {
         newGameButton.setPrefSize(100, 20);
         newGameButton.setDefaultButton(true);
         newGameButton.setOnAction(event -> {
-            try {
-                initBoard();
-                currentPlayer = 'X';
-                comp = 'O';
-                borderPane.setCenter(gridPane);
-                statusMsg.setText("  X has to move first");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });
+                    try {
+                        initBoard();
+                        currentPlayer = 'X';
+                        comp = 'O';
+                        borderPane.setCenter(gridPane);
+                        statusMsg.setText("  X has to move first");
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+        );
 
         Button exitButton = new Button("EXIT");
         exitButton.setPrefSize(100, 20);
@@ -92,16 +91,6 @@ public class TicTacToeApp extends Application {
         }
     }
 
-    private boolean isBoardFull() {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++)
-                if (cell[i][j].getPlayer() == ' ') {
-                    return false;
-                }
-        }
-        return true;
-    }
-
     private boolean hasWon(char player) {
         for (int i = 0; i < 3; i++)
             if (cell[i][0].getPlayer() == player && cell[i][1].getPlayer() == player
@@ -120,32 +109,51 @@ public class TicTacToeApp extends Application {
                 return true;
             }
         }
-        if (cell[0][0].getPlayer() == player && cell[1][1].getPlayer() == player
-                && cell[2][2].getPlayer() == player) {
-            cell[0][0].setStyle("-fx-background-color: darkgray;");
-            cell[1][1].setStyle("-fx-background-color: darkgray;");
-            cell[2][2].setStyle("-fx-background-color: darkgray;");
-            return true;
+            if (cell[0][0].getPlayer() == player && cell[1][1].getPlayer() == player
+                    && cell[2][2].getPlayer() == player) {
+                cell[0][0].setStyle("-fx-background-color: darkgray;");
+                cell[1][1].setStyle("-fx-background-color: darkgray;");
+                cell[2][2].setStyle("-fx-background-color: darkgray;");
+                return true;
         }
-        if (cell[0][2].getPlayer() == player && cell[1][1].getPlayer() == player
-                && cell[2][0].getPlayer() == player) {
-            cell[0][2].setStyle("-fx-background-color: darkgray;");
-            cell[1][1].setStyle("-fx-background-color: darkgray;");
-            cell[2][0].setStyle("-fx-background-color: darkgray;");
-            return true;
+            if (cell[0][2].getPlayer() == player && cell[1][1].getPlayer() == player
+                    && cell[2][0].getPlayer() == player) {
+                cell[0][2].setStyle("-fx-background-color: darkgray;");
+                cell[1][1].setStyle("-fx-background-color: darkgray;");
+                cell[2][0].setStyle("-fx-background-color: darkgray;");
+                return true;
         }
         return false;
     }
 
-    private boolean compTurn() {
+    public boolean isBoardFull() {
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++)
+
+                if (cell[i][j].getPlayer() == ' ') {
+                    return false;
+                }
+        }
+        return true;
+    }
+
+    public int[] move() {
+        for (int[] move : preferredMoves) {
+            if (cell[move[0]][move[1]].getPlayer() == ' ') {
+                return move;
+            }
+        }
+        assert false : "No empty cell?!";
+        return null;
+    }
+
+    public boolean compTurn() {
+        int[] move = move();
         int see = 0;
         while (see == 0) {
-            Random r = new Random();
-            int i = r.nextInt(3);
-            int j = r.nextInt(3);
-
-            if (cell[i][j].getPlayer() == ' ') {
-                cell[i][j].setPlayer(comp);
+            if (move != null) {
+                cell[move[0]][move[1]].setPlayer(comp);
                 see = 1;
             }
             if (hasWon(comp)) {
@@ -190,4 +198,5 @@ public class TicTacToeApp extends Application {
             }
         }
     }
+
 }
